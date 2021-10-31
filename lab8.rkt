@@ -114,7 +114,7 @@
 ; replicates a trip n times
 (define (repeat n a)
   (cond [(equal? n 0) a]
-        [else (append a (- n 1))]))
+        [else (append a (repeat (- n 1) a))]))
 
 
 (define hexagon-trip
